@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>par ou impar</title>
+    <script>
+        function verificarParImpar(){
+            let numero = parseInt(document.getElementById("numero").value);
+            let resultado = document.getElementById("resultado");
+            if (numero % 2 == 0) {
+                resultado.textContent= "o numero " + numero + "é par.";
+            } else {
+                resultado.textContent= "o numero " + numero + "é impar.";
+            }
+        }
+    </script>
 </head>
 <body>
+    <h1> verificador de par ou impar</h1>
+    <input type="number" id="numero" placeholder="digite um numero">
+    <button onclick="verificarParImpar()">verificar</button>
+    <P id="resultado"></P>
     
 </body>
 </html>

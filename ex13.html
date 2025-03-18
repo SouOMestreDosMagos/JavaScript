@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mostrar dia</title>
+    <script>
+        function mostrardia(){
+        let dia = document.getElementById("dia").value;
+        let resultado = document.getElementById("resultado");
+
+        if (dia == 1){
+                resultado.textContent = "domingo";
+            } else if (dia == 2){
+                resultado.textContent = "segunda-feira";
+            } else if (dia == 3){
+                resultado.textContent = "terça-feira";
+            } else if (dia == 4){
+                resultado.textContent = "quarta-feira";
+            } else if (dia == 5){
+                resultado.textContent = "quinta-feira";
+            } else if (dia == 6){
+                resultado.textContent = "sexta-feira";
+            } else if (dia == 7){
+                resultado.textContent = "sábado";
+            } else {
+                resultado.textContent = "dia invalido";
+            }
+        }
+    </script>
 </head>
 <body>
+    <h1>mostra dia da semana</h1>
+    <input type="number" id="dia" placeholder="digite um numero de 1 a 7">
+    <button onclick="mostrardia()">mostra dia</button>
+    <script type="text/javascript" src="js/mostrardia.js"></script>
+    <P id="resultado"></P>
     
 </body>
 </html>

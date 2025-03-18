@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
+    <script>
+        function calcular(operação) {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let resultado;
+
+            switch (operação){
+                case 'soma':
+                    resultado = num1 + num2;
+                    break;
+                case 'subtracao':
+                    resultado = num1 - num2;
+                    break;
+                case 'multiplicacao':
+                    resultado = num1 * num2;
+                    break;
+                case 'divisao':
+                    resultado = num1 / num2;
+                    break;
+                default:
+                    resultado = "operação invalida";
+            }
+
+            document.getElementById("resultado").textContent = "resultado: " + resultado;
+        }
+    </script>
 </head>
 <body>
+    <h1>calculadora</h1>
+    <input type="number" id="num1" placeholder="numero 1">
+    <input type="number" id="num2" placeholder="numero 2">
+    <button onclick="calcular('soma')">+</button>
+    <button onclick="calcular('subtracao')">-</button>
+    <button onclick="calcular('multiplicacao')">*</button>
+    <button onclick="calcular('divisao')">/</button>
+    <P id="resultado"></P>
     
 </body>
 </html>

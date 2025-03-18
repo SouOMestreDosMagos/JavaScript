@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>media de notas</title>
+    <script>
+        function calcularmedia(){
+            let notas = [];
+            for (let i = 1; i < 4; i++){
+                notas.push(parseFloat(document.getElementById("nota" + i).value));
+            }
+            let media = notas .reduce((a,b)=> a + b) / notas.length;
+            document.getElementById("resultado").textContent = " a media é " + media.toFixed(2);
+        }
+    </script>
 </head>
 <body>
+    <h1>calculo de media</h1>
+    <input type="number" id="nota1" placeholder="nota 1">
+    <input type="number" id="nota2" placeholder="nota 2">
+    <input type="number" id="nota3" placeholder="nota 3">
+    <input type="number" id="nota4" placeholder="nota 4">
+    <button onclick="calcularmedia()">calcular</button>
+    <P id="resultado"></P>
     
 </body>
 </html>

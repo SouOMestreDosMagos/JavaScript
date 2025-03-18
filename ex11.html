@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>calculo de IMC</title>
+    <script>
+        function calcularIMC(){
+            let peso = parseFloat(document.getElementById("peso").value);
+            let altura= parseFloat(document.getElementById("altura").value);
+            let imc = peso / (altura * altura);
+            document. getElementById("resultado").textContent = "seu IMC é: " + imc.toFixed(2);
+        }
+    </script>
 </head>
 <body>
+    <h1>calculo de IMC</h1>
+    <input type="number" id="peso" placeholder="seu peso">
+    <input type="number" id="altura" placeholder="sua altura">
+    <button onclick="calcularIMC()">calcular imc</button>
+    <P id="resultado"></P>
     
 </body>
 </html>
