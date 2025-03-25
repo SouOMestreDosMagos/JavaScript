@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enviar dados para a função</title>
+    <script>
+        function enviardados(num1,num2){
+            resultado.textContent = parseFloat(num1) + parseFloat(num2)
+            document.getElementById(resultado).textContent = "resultado" + resultado;
+        }
+    </script>
+</head>
+<body>
+    <form id = "meuformulario">
+        <label for="numero1">numero 1:</label>
+        <input type="number" id="num1" name="num1">
+
+        <label for="numero2">numero 2:</label>
+        <input type="number" id="num2" name="num2">
+
+        <button type="button" onclick="enviardados (num1.value,num2.value)">enviar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+</body>
+</html>
