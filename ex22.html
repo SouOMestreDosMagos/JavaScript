@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Letras</title>
+    <script>
+        function contarletras(str, letra) {
+            const contagem = str.split('').filter(char => char === letra).length; 
+            document.getElementById("resultado").textContent = "A letra " + letra + " aparece " + contagem + " vezes.";
+        }
+    </script>
+</head>
+<body>
+    <form id="meuformulario">
+        <label for="string">String:</label>
+        <input type="text" id="string" name="string">
+
+        <label for="letra">Letra:</label>
+        <input type="text" id="letra" name="letra" maxlength="1">
+
+        <button type="button" onclick="contarletras(document.getElementById('string').value, document.getElementById('letra').value)">Contar Letras</button> 
+    </form>
+    
+    <p id="resultado"></p>    
+</body>
+</html>

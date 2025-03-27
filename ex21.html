@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter String</title>
+    <script>
+        function inverter(str) {
+            const invertida = str.split('').reverse().join('');
+            document.getElementById("resultado").textContent = "String invertida: " + invertida;
+        }
+    </script>
+</head>
+<body>
+    <form id="meuformulario">
+        <label for="string">String:</label>
+        <input type="text" id="string" name="string">
+
+        <button type="button" onclick="inverter(document.getElementById('string').value)">Inverter String</button>
+    </form>
+    
+    <p id="resultado"></p>  
+</body>
+</html>
