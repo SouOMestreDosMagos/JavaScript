@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECLA</title>
+</head>
+<body>
+    <input type="text" id="campotexto" placeholder = "Digite algo">
+    <input type="text" id="camp" onkeydown="pressionar(event)">
+
+    <script>
+        const campo = document.getElementById('campotexto');
+        campo.addEventListener('keydown', function(event){
+            console.log("Tecla pressionada: ", event.key);
+        });
+        function pressionar(event){
+            console.log("Tecla pressionada: ", event.key);
+        }
+    </script>
+</body>
+</html>

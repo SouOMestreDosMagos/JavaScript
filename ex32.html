@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR IN</title>
+</head>
+<body>
+    <table id="dados">
+        <thead></thead>
+            <tr>
+                <th>Chave</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const produto ={
+            nome: 'laptop',
+            preco: 1200,
+            marca: 'Dell',
+            instock: true
+        };
+
+        const dados = document.getElementById("dados").getElementsByTagName('tbody')[0];
+
+        for(const chave in produto){
+            const novalinha = dados.insertRow();
+            const celulachave = novalinha.insertCell();
+            const celulavalor = novalinha.insertCell();
+
+            celulachave.textContent = chave;
+            celulavalor.textContent = produto[chave];
+
+        }
+    </script>
+</body>
+</html>
