@@ -1,13 +1,23 @@
-<script>
-    ara = [1,2,3,4]
-    const somar = (a) => {
-        let rar = []
-        for (let i = 0; i < a.length; i++) {
-            if (a[i]%2 == 0){
-                rar += a[i]
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar Números Pares</title>
+</head>
+<body>
+    <script>
+        const ara = [1, 2, 3, 4]; 
+        const somar = (a) => {
+            let rar = []; 
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] % 2 === 0) { 
+                    rar.push(a[i]); 
+                }
             }
-        }
-        return rar
-    };
-    console.log(somar(ara));
-</script>
+            return rar; 
+        };
+        console.log(somar(ara));
+    </script>
+</body>
+</html>

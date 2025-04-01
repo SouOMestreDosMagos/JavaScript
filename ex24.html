@@ -1,4 +1,25 @@
-<script>
-    const tavazia = (a) => {if(a == ""){return "vazio";}else{ return "não é vazio";}};
-    console.log(tavazia("a"));
-</script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar se a string está vazia</title>
+</head>
+<body>
+    <script>
+        const tavazia = (a) => {
+            if (a === "") {
+                return "vazio"; 
+            } else {
+                return "não é vazio"; 
+            }
+        };
+
+       
+        console.log(tavazia("a")); 
+        
+        
+        console.log(tavazia("")); 
+    </script>
+</body>
+</html>
