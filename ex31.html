@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR OF</title>
+</head>
+<body>
+    <h1>FOR E OF</h1>
+    <div id="result"></div>
+    <h1>PARES</h1>
+    <div id="par"></div>
+    <h1>ÍMPARES</h1>
+    <div id="impar"></div>
+    <script>
+        const numeros = [1,2,3,4,5]
+        let result = document.getElementById("result");
+        let par = document.getElementById("par");
+        let impar = document.getElementById("impar");
+        output = "";
+        output_par = "";
+        output_impar = "";
+
+        for(const numero of numeros){
+            output += numero + "<br>";
+            if (numero % 2 == 0) {
+                output_par += numero + "-";
+            } else {
+                output_impar += numero + "-";
+            }
+        }
+        result.innerHTML = output;
+        par.innerHTML = output_par;
+        impar.innerHTML = output_impar;
+    </script>
+</body>
+</html>
