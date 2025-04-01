@@ -6,6 +6,9 @@
     <title>Verificar se a string está vazia</title>
 </head>
 <body>
+    <h1>Verificação de String</h1>
+    <div id="resultado"></div>
+
     <script>
         const tavazia = (a) => {
             if (a === "") {
@@ -15,11 +18,15 @@
             }
         };
 
-       
-        console.log(tavazia("a")); 
         
+        const resultado1 = tavazia("a"); 
+        const resultado2 = tavazia(""); 
+
         
-        console.log(tavazia("")); 
+        document.getElementById("resultado").innerHTML = `
+            A string "a" está: ${resultado1} <br>
+            A string "" está: ${resultado2}
+        `;
     </script>
 </body>
 </html>

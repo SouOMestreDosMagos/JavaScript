@@ -6,12 +6,16 @@
     <title>Converter para Maiúsculas</title>
 </head>
 <body>
+    <h1>Conversão para Maiúsculas</h1>
+    <div id="resultado"></div>
+
     <script>
-       
         const maiusculo = (tex) => tex.toUpperCase();
 
-        
-        console.log(maiusculo("algo")); 
+        const textoConvertido = maiusculo("algo");
+
+       
+        document.getElementById("resultado").innerHTML = `Texto em maiúsculas: ${textoConvertido}`;
     </script>
 </body>
 </html>

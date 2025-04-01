@@ -6,6 +6,9 @@
     <title>Somar Números Pares</title>
 </head>
 <body>
+    <h1>Números Pares</h1>
+    <div id="resultado"></div>
+
     <script>
         const ara = [1, 2, 3, 4]; 
         const somar = (a) => {
@@ -17,7 +20,12 @@
             }
             return rar; 
         };
-        console.log(somar(ara));
+
+     
+        const numerosPares = somar(ara);
+
+       
+        document.getElementById("resultado").innerHTML = `Números pares: ${numerosPares.join(", ")}`;
     </script>
 </body>
 </html>

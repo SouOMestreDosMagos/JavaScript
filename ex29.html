@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <h1>Números Pares</h1>
+    <div id="resultado"></div>
+
+    <script>
+        let conta = 0; 
+        let numerosPares = ""; 
+
+        while (conta <= 10) {
+            if (conta % 2 === 0) { 
+                numerosPares += conta + "<br>"; 
+            }
+            conta++; 
+        }
+
+        
+        document.getElementById("resultado").innerHTML = numerosPares;
+    </script>
+
+</body>
+</html>
