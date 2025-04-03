@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome com Maior Salário</title>
+    <script>
+        function nomeMaiorSalario(array) {
+            return array.reduce((maior, obj) => (obj.salario > maior.salario ? obj : maior)).nome;
+        }
+
+        function calcularNomeMaiorSalario() {
+            const pessoas = [
+                { nome: "João", salario: 3000 },
+                { nome: "Maria", salario: 4000 },
+                { nome: "Pedro", salario: 5000 }
+            ];
+            const resultado = nomeMaiorSalario(pessoas);
+            document.getElementById("resultado").textContent = "Nome com maior salário: " + resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Nome da Pessoa com Maior Salário</h1>
+    <button onclick="calcularNomeMaiorSalario()">Encontrar Nome com Maior Salário</button>
+    <p id="resultado"></p>
+</body>
+</html>

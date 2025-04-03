@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprimento das Strings</title>
+    <script>
+        function comprimentoStrings() {
+            const strings = ["maçã", "banana", "laranja"];
+            const comprimentos = strings.map(str => str.length);
+            document.getElementById("resultado").textContent = "Comprimentos: " + comprimentos.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Comprimento das Strings</h1>
+    <button onclick="comprimentoStrings()">Calcular Comprimentos</button>
+    <p id="resultado"></p>
+</body>
+</html>

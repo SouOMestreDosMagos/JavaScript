@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings em Ordem Alfabética</title>
+    <script>
+        function ordenarStrings(array) {
+            return [...array].sort();
+        }
+
+        function calcularStringsOrdenadas() {
+            const strings = ["maçã", "banana", "laranja"];
+            const resultado = ordenarStrings(strings);
+            document.getElementById("resultado").textContent = "Strings em ordem alfabética: " + resultado.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Strings em Ordem Alfabética</h1>
+    <button onclick="calcularStringsOrdenadas()">Ordenar Strings</button>
+    <p id="resultado"></p>
+</body>
+</html>

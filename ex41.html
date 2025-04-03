@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+    <script>
+        function maiorNumero(array) {
+            return Math.max(...array);
+        }
+
+        function calcularMaiorNumero() {
+            const numeros = [1, 2, 3, 4, 5, 6];
+            const resultado = maiorNumero(numeros);
+            document.getElementById("resultado").textContent = "Maior número: " + resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Maior Número Encontrado</h1>
+    <button onclick="calcularMaiorNumero()">Encontrar Maior Número</button>
+    <p id="resultado"></p>
+</body>
+</html>

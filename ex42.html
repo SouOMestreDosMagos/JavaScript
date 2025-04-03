@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Mais Longa</title>
+    <script>
+        function stringMaisLonga(array) {
+            return array.reduce((longa, str) => (str.length > longa.length ? str : longa), "");
+        }
+
+        function calcularStringMaisLonga() {
+            const strings = ["maçã", "banana", "laranja", "kiwi"];
+            const resultado = stringMaisLonga(strings);
+            document.getElementById("resultado").textContent = "String mais longa: " + resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>String Mais Longa</h1>
+    <button onclick="calcularStringMaisLonga()">Encontrar String Mais Longa</button>
+    <p id="resultado"></p>
+</body>
+</html>

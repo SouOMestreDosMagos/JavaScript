@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomes Maior de Idade</title>
+    <script>
+        function nomesMaiorDeIdade() {
+            const pessoas = [
+                { nome: "João", idade: 20 },
+                { nome: "Maria", idade: 17 },
+                { nome: "Pedro", idade: 25 }
+            ];
+            const nomes = pessoas.filter(p => p.idade > 18).map(p => p.nome);
+            document.getElementById("resultado").textContent = "Nomes maiores de idade: " + nomes.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Nomes com Idade Superior a 18 Anos</h1>
+    <button onclick="nomesMaiorDeIdade()">Listar Nomes</button>
+    <p id="resultado"></p>
+</body>
+</html>
